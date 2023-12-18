@@ -38,7 +38,7 @@ End Input
 
 Calculate "pricePerPerson"
     pricePerPerson === (totalsumman / numberOfFriends)
-    PRINT pricePerPerson
+    PRINT "Varje person ska betala:" (pricePerPerson)
 
 
 */
