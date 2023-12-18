@@ -22,8 +22,8 @@ Input "total"
         End If
     Else If "total" är annat än siffra gå tillbaka till input "total";
     End Else
-    Calculate
-        totalsumman (total * tips)
+    Calculate variabel totalSumman
+        totalSumman === (total * tips)
         PRINT totalsumman
 End Input
 
@@ -36,7 +36,7 @@ Input "numberOfFriends"
     End Else
 End Input
 
-Calculate "pricePerPerson"
+Calculate variabel pricePerPerson
     pricePerPerson === (totalsumman / numberOfFriends)
     PRINT "Varje person ska betala:" (pricePerPerson)
 
