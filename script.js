@@ -57,18 +57,71 @@ Calculate variabel pricePerPerson
 /*
 
 function play()
-    SET variabel ordbok = [..., ..., ...]; // Innehåller ALLA ord i det engelska språket
-    SET variabel startOrd till "FOUR";
-    SET variabel slutordOrd till "FIVE";
+     // Innehåller ALLA ord i det engelska språket        
 
 
 end function
 
-function isOneLetterApart(wordOne, wordTwo)
+function isOneLetterApart(wordOne, wordTwo) Vad betyder isoneletterapart? Bättre med oneLetterChanged
     SET variabel diffCount till 0;
 
 
     return diffCount === 1; // returnerar sant om endast en bokstav ändrats, annars falskt
 end function
 
+-------------------------------------------------------------------------------------------
+SET variabel ordbok = [..., ..., ...];
+SET variabel startOrd till "FOUR";                                                         
+SET variabel slutordOrd till "FIVE";
+SET variabel nyaOrdet till (nyaOrdet)
+SET variabel changeCount till 0;
+
+Start puzzle
+    PRINT "Välkommen till ordspelet!"
+
+Input
+    SET variabel startOrd = "four"
+        är detta ett ord
+        finns ordet i ordboken
+    Return startOrd
+    If startOrd är ett ord och är i ordboken
+        PRINT "Fortsätt till Slutordet"
+    End If
+
+Input
+    SET variabel SlutOrd = "five"
+        är detta ett ord
+        finns ordet i ordboken
+        If slutord = startOrd
+            PRINT "Du får inte använda samma ord. Försök igen."
+        End If
+        If slutOrd har annan antal bokstäver än startOrd
+            PRINT "Orden måste samma antal bokstäver. Försök igen."
+    Return slutOrd
+    If startOrd är ett ord och är i ordboken
+        PRINT "Nu är vi redo att gå till nästa steg"
+    End If
+
+Loop
+    PRINT "Välj bokstav att byta ut"
+
+    Input variabel NyBokstav
+            If nyBokstav är en bokstav RETURN nybokstav
+            End If
+            If nyBokstav >< 1 bokstav
+                PRINT "Oj, det blev fel. Här ska du bara skriva in en bokstav."
+            End If
+            If nyaOrdet är ett ord RETURN nyaOrdet
+            End If
+    End Input
+
+    Calculate changeCount
+        (changecount + 1) RETURN changeCount
+    If nyaordet = slutOrd
+        PRINT "Grattis, det tog +changeCount+ försök."
+    Else
+        PRINT nyaOrdet och gå tillbaka till Input "Välj bokstav att byta ut"
+        End If
+
 */
+
