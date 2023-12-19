@@ -70,9 +70,8 @@ function isOneLetterApart(wordOne, wordTwo) Vad betyder isoneletterapart? Bättr
 end function
 
 -------------------------------------------------------------------------------------------
+/*
 SET variabel ordbok = [..., ..., ...];
-SET variabel startOrd till "FOUR";                                                         
-SET variabel slutordOrd till "FIVE";
 SET variabel nyaOrdet till (nyaOrdet)
 SET variabel changeCount till 0;
 
@@ -80,48 +79,52 @@ Start puzzle
     PRINT "Välkommen till ordspelet!"
 
 Input
-    SET variabel startOrd = "four"
-        är detta ett ord
-        finns ordet i ordboken
-    Return startOrd
+    SET variabel startOrd = "four" (four kan bytas ut mot userInput)
+        Return startOrd
     If startOrd är ett ord och är i ordboken
-        PRINT "Fortsätt till Slutordet"
+        PRINT "Fortsätt till Slutordet och skriva in ett nytt ord med samma antal bokstäver."
     End If
+    Else
+        PRINT 
 
 Input
-    SET variabel SlutOrd = "five"
-        är detta ett ord
-        finns ordet i ordboken
-        If slutord = startOrd
-            PRINT "Du får inte använda samma ord. Försök igen."
-        End If
-        If slutOrd har annan antal bokstäver än startOrd
-            PRINT "Orden måste samma antal bokstäver. Försök igen."
+    SET variabel SlutOrd = "five" (five kan bytas ut mot userInput)
+        RETURN slutOrd
+    If slutOrd = startOrd
+        PRINT "Du får inte använda samma ord. Försök igen."
+    End If
+    If slutOrd har annan antal bokstäver än startOrd
+        PRINT "Orden måste ha samma antal bokstäver. Försök igen och skriv ett ord med samma antal boksäver som startordet."
     Return slutOrd
-    If startOrd är ett ord och är i ordboken
+    If slutOrd är ett ord och är i ordboken
         PRINT "Nu är vi redo att gå till nästa steg"
     End If
-
-Loop
+    Else
+        PRINT "Oj, ordet finns inte i ordboken, försök igen!"
+Loop där användaren kan byta ut bokstäver och skapa nya ord
     PRINT "Välj bokstav att byta ut"
 
     Input variabel NyBokstav
-            If nyBokstav är en bokstav RETURN nybokstav
+        If nyBokstav är en bokstav
+            Byt ut vald bokstav i nyaOrdet med nyBokstav;
+            If nyaOrdet finns i ordboken;
+                SET changeCount till changeCount + 1;
+                RETURN nyaOrdet
+            Else
+                PRINT "Oj, ordet finns inte i ordboken, försök igen!"
             End If
-            If nyBokstav >< 1 bokstav
-                PRINT "Oj, det blev fel. Här ska du bara skriva in en bokstav."
-            End If
-            If nyaOrdet är ett ord RETURN nyaOrdet
-            End If
+        End If
+        If nyBokstav >< 1 bokstav
+            PRINT "Oj, det blev fel. Här ska du bara skriva in en bokstav."
+        End If
     End Input
 
-    Calculate changeCount
-        (changecount + 1) RETURN changeCount
     If nyaordet = slutOrd
         PRINT "Grattis, det tog +changeCount+ försök."
     Else
         PRINT nyaOrdet och gå tillbaka till Input "Välj bokstav att byta ut"
-        End If
+    End If
+End Loop
 
 */
 
