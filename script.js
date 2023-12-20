@@ -2,6 +2,9 @@
 // Skriv din pseudokod innanför nedanstående kommentarsblock
 /*
 
+//Pseudokoden här är gjord för att förklara ett enkelt program som räknar ut vad varje person ska betala när de ska dela en nota rakt av.
+
+
 SET variabel numberOfFriends till användarInput i siffror;
 SET variabel tip till användarInput i procent; (en procentsats 10% = 0.10)
 SET variabel total till användarInput i siffror;
@@ -56,6 +59,8 @@ Calculate variabel pricePerPerson
 
 
 /*
+
+// Ett spel där användaren skriver in en start- och ett slutord av samma antal bokstäver för att sedan byta ut en bokstav i taget för att forma nya ord tills startordet har ändrats till slutordet.
 
 SET variabel ordbok = [..., ..., ...]; simulerar alla ord i en ordbok.
 variabel nyaOrdet till (nyaOrdet)
