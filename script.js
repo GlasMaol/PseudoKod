@@ -6,6 +6,15 @@ SET variabel numberOfFriends till användarInput i siffror;
 SET variabel tip till användarInput i procent; (en procentsats 10% = 0.10)
 SET variabel total till användarInput i siffror;
 
+Input "total"
+    If "total" är en siffra RETURN Input och fortsätt till nästa steg;
+        If total > 0; 
+        End If
+    End If
+    Else If "total" är annat än siffra gå tillbaka till input "total";
+        PRINT "Oj, verkar som du inte skrev in en giltig siffra!"
+    End Else
+End Input
 
 Input "tip"
     If "tip" är en siffra RETURN Input och fortsätt till nästa steg;
@@ -13,16 +22,6 @@ Input "tip"
         End If    
     End If
     Else If "tip" är annat än siffra gå tillbaka till input "tip";
-        PRINT "Oj, verkar som du inte skrev in en giltig siffra!"
-    End Else
-End Input
-
-Input "total"
-    If "total" är en siffra RETURN Input och fortsätt till nästa steg;
-        If total > 0; 
-        End If
-    End If
-    Else If "total" är annat än siffra gå tillbaka till input "total";
         PRINT "Oj, verkar som du inte skrev in en giltig siffra!"
     End Else
 End Input
