@@ -18,7 +18,7 @@ Input "tip"
 End Input
 
 Input "total"
-    If "total" är en siffra RETUEN Input och fortsätt till nästa steg;
+    If "total" är en siffra RETURN Input och fortsätt till nästa steg;
         If total > 0; 
         End If
     End If
@@ -54,53 +54,42 @@ Calculate variabel pricePerPerson
 
 // VG-Version - Lewis Carroll Word Puzzle
 // Skriv din pseudokod innanför nedanstående kommentarsblock
+
+
 /*
 
-function play()
-     // Innehåller ALLA ord i det engelska språket        
-
-
-end function
-
-function isOneLetterApart(wordOne, wordTwo) Vad betyder isoneletterapart? Bättre med oneLetterChanged
-    SET variabel diffCount till 0;
-
-
-    return diffCount === 1; // returnerar sant om endast en bokstav ändrats, annars falskt
-end function
-
--------------------------------------------------------------------------------------------
-/*
-SET variabel ordbok = [..., ..., ...];
-SET variabel nyaOrdet till (nyaOrdet)
+SET variabel ordbok = [..., ..., ...]; simulerar alla ord i en ordbok.
+variabel nyaOrdet till (nyaOrdet)
 SET variabel changeCount till 0;
 
 Start puzzle
     PRINT "Välkommen till ordspelet!"
 
 Input
-    SET variabel startOrd = "four" (four kan bytas ut mot userInput)
+    SET variabel startOrd = "four" (four kan bytas ut mot userInput eller random)
         Return startOrd
     If startOrd är ett ord och är i ordboken
         PRINT "Fortsätt till Slutordet och skriva in ett nytt ord med samma antal bokstäver."
     End If
     Else
-        PRINT 
+        PRINT "Oj, ordet finns inte i ordboken, försök igen!"
 
 Input
-    SET variabel SlutOrd = "five" (five kan bytas ut mot userInput)
+    SET variabel SlutOrd = "five" (four kan bytas ut mot userInput eller random)
         RETURN slutOrd
     If slutOrd = startOrd
         PRINT "Du får inte använda samma ord. Försök igen."
     End If
     If slutOrd har annan antal bokstäver än startOrd
         PRINT "Orden måste ha samma antal bokstäver. Försök igen och skriv ett ord med samma antal boksäver som startordet."
-    Return slutOrd
+        Return slutOrd
+    End If
     If slutOrd är ett ord och är i ordboken
         PRINT "Nu är vi redo att gå till nästa steg"
     End If
     Else
         PRINT "Oj, ordet finns inte i ordboken, försök igen!"
+
 Loop där användaren kan byta ut bokstäver och skapa nya ord
     PRINT "Välj bokstav att byta ut"
 
@@ -119,7 +108,7 @@ Loop där användaren kan byta ut bokstäver och skapa nya ord
         End If
     End Input
 
-    If nyaordet = slutOrd
+    If nyaOrdet = slutOrd
         PRINT "Grattis, det tog +changeCount+ försök."
     Else
         PRINT nyaOrdet och gå tillbaka till Input "Välj bokstav att byta ut"
